@@ -2,6 +2,7 @@
   padding: 80px;
   background-color: #0d0d0d;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .section-title {
@@ -46,4 +47,78 @@
 .service-card h3 {
   font-size: 18px;
   color: #ff7300;
+}
+/* الهواتف الصغيرة جدًا: أقل من 480px */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .image-section {
+    width: 250px;
+    height: 300px;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    transform: translateY(-30px);
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 30px 15px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .image-section {
+    width: 300px;
+    height: 400px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }

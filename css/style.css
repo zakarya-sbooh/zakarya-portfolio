@@ -4,47 +4,32 @@ html {
 }
 
 @media (max-width: 768px) {
-  .hero {
+  .navbar {
     flex-direction: column;
-    padding: 40px 20px;
-    height: auto;
-    text-align: center;
-  }
-
-  .text-section {
-    max-width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .image-section {
-    width: 300px;
-    height: 300px;
-  }
-
-  .image-section::before {
-    width: 320px;
-    height: 320px;
-  }
-
-  .image-section img {
-    width: 310px;
-    height: 310px;
+    padding: 20px;
+    gap: 10px;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
   }
 
-  .navbar {
+  .hero {
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .text-section,
+  .image-section {
+    max-width: 100%;
   }
 
   .cta-buttons {
     flex-direction: column;
+    align-items: center;
   }
 
   .stats {
@@ -174,6 +159,7 @@ nav ul li a.active {
   display: flex;
   gap: 25px;
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 .stat {
   background-color: #1a1a1a;
@@ -191,44 +177,4 @@ nav ul li a.active {
 .stat span {
   font-size: 14px;
   color: #bbb;
-}
-
-/* Image Section */
-.image-section {
-  position: relative;
-  width: 380px;
-  height: 500px;
-  margin-top: -90px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-/* الدائرة */
-.image-section::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 360px;
-  height: 320px;
-  background-color: #1a1a1a;
-  border-radius: 50%;
-  z-index: 0;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-}
-
-/* الصورة مع mask للتدرج السفلي */
-.image-section img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  position: relative;
-  z-index: 1;
-  object-fit: contain;
-  transform: translateY(-50px);
-  border-radius: 30px;
-
-  /* 👇 السحر هنا: إخفاء الجزء السفلي بتدرج */
-  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }

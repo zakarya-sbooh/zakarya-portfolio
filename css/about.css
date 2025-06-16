@@ -13,6 +13,7 @@
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .about-image img {
@@ -49,4 +50,19 @@
 .about-content .btn-orange {
   padding: 12px 28px;
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .about-image {
+    margin-bottom: 30px;
+  }
 }
